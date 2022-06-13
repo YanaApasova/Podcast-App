@@ -12,18 +12,25 @@ class MainViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        handleNotAuthenticated()
     }
     
     private func handleNotAuthenticated(){
         //chek user status
         if Auth.auth().currentUser == nil {
             //show login
-            let introVc = IntroViewController()
-            introVc.modalPresentationStyle = .fullScreen
-            present(introVc,animated: false)
+            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let viewController = storyboard.instantiateViewController(withIdentifier: "IntroViewController") as! IntroViewController
+            viewController.modalPresentationStyle = .fullScreen
+            self.present(viewController, animated: false) {
+                print("Presented")
+            }
+            
         }
-    }
-
+    
+}
 }

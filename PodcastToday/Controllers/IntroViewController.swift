@@ -24,3 +24,11 @@ class IntroViewController: UIViewController {
         
     }
 }
+
+extension UINavigationController {
+
+    var rootViewController: UIViewController? {
+        return viewControllers.first
+    }
+
+}

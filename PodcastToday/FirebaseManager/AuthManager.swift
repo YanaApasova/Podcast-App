@@ -60,8 +60,15 @@ public class AuthManager {
                 completion (true)
             }
         }
-        else if let username = username{
-            print(username)
+        else if let username = username {
+            Auth.auth().signIn(withEmail: username, password: password) {
+                authResult, error in
+                guard authResult != nil , error == nil else {
+                    completion (false)
+                    return
+                }
+                completion (true)
+            }
         }
     }
     ///Attempt to logout firebase user

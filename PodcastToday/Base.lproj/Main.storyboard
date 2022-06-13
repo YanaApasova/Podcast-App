@@ -325,7 +325,7 @@
                                         <rect key="frame" x="0.0" y="205" width="334" height="40"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REPEAT PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ng7-QI-3Kl">
                                         <rect key="frame" x="0.0" y="246" width="334" height="40"/>
@@ -424,7 +424,7 @@
         <!--View Controller-->
         <scene sceneID="8EX-eI-FRd">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" id="86E-Ab-78A" sceneMemberID="viewController">
+                <viewController id="86E-Ab-78A" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R0q-AF-Q0h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -484,13 +484,14 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ne7-dE-034" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationItem title="Title" id="UMS-YF-XHR"/>
             </objects>
             <point key="canvasLocation" x="5064" y="-851"/>
         </scene>
         <!--Listen now-->
         <scene sceneID="klC-1e-8wq">
             <objects>
-                <viewController id="mHq-0Z-yZR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListenNowViewController" id="mHq-0Z-yZR" customClass="ListenNowViewController" customModule="PodcastToday" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mz7-Lf-8W5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -507,7 +508,7 @@
         <!--Main View Controller-->
         <scene sceneID="gfS-Mb-4DT">
             <objects>
-                <tabBarController id="bNN-Vs-MQe" customClass="MainViewController" customModule="PodcastToday" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainViewController" id="bNN-Vs-MQe" customClass="MainViewController" customModule="PodcastToday" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JHl-Ac-k4k">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
